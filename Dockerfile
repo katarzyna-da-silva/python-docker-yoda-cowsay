@@ -1,13 +1,13 @@
 # version normal
 
-FROM python:3
+FROM python:3-alpine
 
 WORKDIR . /cowsay
 
 COPY . /app
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
-RUN apk --no-cache add python3
+RUN apk --no-cache add python
 CMD ["sh", "cowsay.sh"]
 
 # version min 
@@ -19,5 +19,5 @@ WORKDIR . /cowsay
 COPY . /app
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
-RUN apk --no-cache add python3
+RUN apk --no-cache add python
 CMD ["sh", "cowsay.sh"]
