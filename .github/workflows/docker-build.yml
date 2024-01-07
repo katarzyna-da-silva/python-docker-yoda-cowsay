@@ -3,7 +3,7 @@ name: Docker Build and push
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build:
@@ -16,7 +16,7 @@ jobs:
     - name: Build and push Docker image
       uses: docker/build-push-action@v2
       with:
-        context: ./app
+       
         push: true
         tags: |
           katarzyna-da-silva/python-docker-yoda-cowsay:latest
