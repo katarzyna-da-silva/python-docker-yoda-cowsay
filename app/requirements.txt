@@ -1,0 +1,4 @@
+lolcat
+cowsay
+toilet
+tuxsay
