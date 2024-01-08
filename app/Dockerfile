@@ -7,7 +7,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 RUN apt-get update \
-    && apt-get install -y bsdmainutils cowsay toilet
+    && apt-get install -y bsdmainutils cowsay toilet lolcat
 
 COPY app/tux.py .
 
