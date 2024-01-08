@@ -26,6 +26,6 @@ jobs:
         context: ./app
         push: true
         tags: |
-          ghcr.io/katarzynadasilva/python-docker-yoda-cowsay:latest
-          ghcr.io/katarzynadasilva/python-docker-yoda-cowsay:full
-          ghcr.io/katarzynadasilva/python-docker-yoda-cowsay:small
+          ghcr.io/katarzyna-da-silva/python-docker-yoda-cowsay:latest
+          ghcr.io/katarzyna-da-silva/python-docker-yoda-cowsay:full
+          ghcr.io/katarzyna-da-silva/python-docker-yoda-cowsay:small
