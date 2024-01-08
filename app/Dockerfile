@@ -1,19 +1,13 @@
-# version normal
-FROM python:3-alpine
+FROM python:3.10-slim
 
-WORKDIR . /cowsay
+WORKDIR /app
 
-COPY . /app
-COPY requirements.txt ./
-RUN pip install -r requirements.txt 
-CMD ["sh", "cowsay.sh"]
+COPY app/tux.py .
 
-# version min 
-FROM python:3-slim
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends lolcat && \
+    apt-get install -y --no-install-recommends bsdmainutils && \ 
+    rm -rf /var/lib/apt/lists/*
 
-WORKDIR . /cowsay
-
-COPY . /app
-COPY requirements.txt ./
-RUN pip install -r requirements.txt
-CMD ["sh", "cowsay.sh"]
+# Set the entrypoint
+ENTRYPOINT ["python", "tux.py"]
