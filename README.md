@@ -3,7 +3,7 @@
 
 ***Description:***
 ### Cowsay Tux is a simple Python application that uses various tools such as cowsay, ponysay, and tuxsay to generate colorful and fun messages on the terminal. Additionally, the application uses Dockerfile to build two versions of the Docker image: full and minimal, which are stored on Docker Hub.
-![cowsay](ansible/src/image1.png)
+![cowsay](img/image1.png)
 ***Directory structure:***
 
      app: Directory containing the application's source files.
@@ -37,4 +37,4 @@
 ### Yoda ASCII Art:
 ***View the yoda.txt file in the app directory for an example of ASCII Art Yoda.***
 
-![cowsay](ansible/src/image.png)
+![cowsay](img/image.png)
