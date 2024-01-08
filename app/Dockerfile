@@ -1,8 +1,13 @@
-FROM python:3.10-slim
+FROM python:3.10
 
 WORKDIR /app
 
-RUN apt-get update && apt-get install -y bsdmainutils
+COPY requirements.txt .
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+RUN apt-get update \
+    && apt-get install -y bsdmainutils cowsay toilet
 
 COPY app/tux.py .
 
@@ -10,5 +15,7 @@ RUN apt-get update && \
     apt-get install -y --no-install-recommends lolcat && \
     apt-get install -y --no-install-recommends bsdmainutils && \ 
     rm -rf /var/lib/apt/lists/*
+
+RUN chmod +x /app/cowsay.sh
 
 ENTRYPOINT ["/app/cowsay.sh"]
