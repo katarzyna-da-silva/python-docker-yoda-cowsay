@@ -9,8 +9,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 RUN apt-get update \
     && apt-get install -y bsdmainutils cowsay toilet lolcat
 
-COPY app/tux.py .
-
 RUN apt-get update && \
     apt-get install -y --no-install-recommends lolcat && \
     apt-get install -y --no-install-recommends bsdmainutils && \ 
