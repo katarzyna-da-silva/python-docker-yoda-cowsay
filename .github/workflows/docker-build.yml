@@ -16,6 +16,9 @@ jobs:
     - name: Display Python Script
       run: python app/tux.py
 
+    - name: Droit for cowsay
+      run:  chmod +x app/cowsay.sh
+
     - name: Display Shell Script
       run: ./app/cowsay.sh
     
