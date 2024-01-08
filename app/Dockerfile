@@ -14,6 +14,4 @@ RUN apt-get update && \
     apt-get install -y --no-install-recommends bsdmainutils && \ 
     rm -rf /var/lib/apt/lists/*
 
-RUN chmod +x /app/cowsay.sh
-
 ENTRYPOINT ["/app/cowsay.sh"]
