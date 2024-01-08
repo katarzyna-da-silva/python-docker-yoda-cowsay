@@ -6,8 +6,7 @@ WORKDIR . /cowsay
 
 COPY . /app
 COPY requirements.txt ./
-RUN pip install --no-cache-dir -r requirements.txt
-RUN apk --no-cache add python3
+RUN pip install --no-cache-dir -r requirements.txt \ apk --no-cache add python3
 CMD ["sh", "cowsay.sh"]
 
 # version min 
@@ -18,6 +17,5 @@ WORKDIR . /cowsay
 
 COPY . /app
 COPY requirements.txt ./
-RUN pip install --no-cache-dir -r requirements.txt
-RUN apk --no-cache add python3
+RUN pip install --no-cache-dir -r requirements.txt \ apk --no-cache add python3
 CMD ["sh", "cowsay.sh"]
