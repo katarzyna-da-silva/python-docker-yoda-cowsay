@@ -15,12 +15,11 @@ if __name__ == "__main__":
 
 import subprocess
 
-def print_three_month_calendar():
+##def print_three_month_calendar():
 
-    result = subprocess.run(["cal", "-3"], capture_output=True, text=True)
+##   result = subprocess.run(["cal", "-3"], capture_output=True, text=True)
 
-    # Drukuj wynik polecenia
-    print(result.stdout)
+##    print(result.stdout)
 
-if __name__ == "__main__":
-    print_three_month_calendar()
+## if __name__ == "__main__":
+##    print_three_month_calendar()
