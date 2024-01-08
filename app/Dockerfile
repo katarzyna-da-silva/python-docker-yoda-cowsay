@@ -1,5 +1,4 @@
 # version normal
-
 FROM python:3-alpine
 
 WORKDIR . /cowsay
@@ -10,7 +9,6 @@ RUN pip install -r requirements.txt
 CMD ["sh", "cowsay.sh"]
 
 # version min 
-
 FROM python:3-slim
 
 WORKDIR . /cowsay
